@@ -41,11 +41,22 @@ class Klant {
     return this.facturen.filter((f) => !f.betaald);
   }
 
-  getTotaalBedragOpenstaand() {
+  getTotaalBedragOpenstaand(teBetalen) {
+    teBetalen = this.getOpenstaandeFacturen()
+    return teBetalen
     // bereken het totaal van de facturen die nog niet betaald zijn.
   }
 }
 
+function printFacturen(factuur){
+  // console.log(`Facturen voor ${factuur.naam} Kleintjes:`)
+  // factuur.facturen.forEach(factuurNummer => {
+  //   console.log(factuurNummer.facturen[0]);
+  // });
+  console.log(`Facturen voor ${factuur.naam} kleintjes: \n ${factuur.facturen[0]} \n ${factuur.facturen[1]}`);
+  
+}
+
 module.exports = {
-  Factuur,
+  Factuur, Klant, printFacturen
 };

@@ -35,3 +35,14 @@ const nietBetaaldContainer = document.getElementById("nietBetaaldContainer");
  * 4. De facturen kijrgen een kleur op basis van betaald / niet betaald (zie css)
  * 5. Klik je op een factuur-regel dan krijg je een popup met de prijs van de factuur
  */
+
+//1
+klanten.forEach((namen)=>{
+  const klantOptie = document.createElement("option")
+  klantOptie.textContent = namen.naam
+  klantOptie.value = namen.klantID
+  klantSelect.appendChild(klantOptie)
+})
+
+//2 
+
