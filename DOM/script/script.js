@@ -45,4 +45,37 @@ klanten.forEach((namen)=>{
 })
 
 //2 
+// if(klanten.naam =="Karel Kleintjes"){
+//   facturenData.forEach((facturen)=>{
+//     const factuur = document.createElement("li")
+//     factuur.textContent = facturen.bedrag
+//     factuur.value = facturen.id
+//     betaaldContainer.appendChild(factuur)
+//   })
+// }
+if(klantSelect.klantID == 1){
+facturenData[1].forEach((facturen)=>{
+    const factuur = document.createElement("li")
+    factuur.textContent = facturen.bedrag
+    factuur.value = facturen.id
+    betaaldContainer.appendChild(factuur)
+    factuur.addEventListener("click", ()=>{
+    console.log(factuur);
+      
+    })
+  })
+}
+else if(klantSelect.klantID == 2){
+  facturenData[2].forEach((facturen)=>{
+    const factuur = document.createElement("li")
+    factuur.textContent = facturen.bedrag
+    factuur.value = facturen.id
+    betaaldContainer.appendChild(factuur)
+    console.log(factuur);
+
+  })
+}
+
+  
+
 
