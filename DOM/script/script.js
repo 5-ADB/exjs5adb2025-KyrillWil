@@ -74,6 +74,18 @@ else if(klantSelect.klantID == 2){
     console.log(factuur);
 
   })
+
+  // aanmaken factuur
+  const factuurPrijs = document.createElement("p");
+  kostprijs.id = "Factuurprijs";
+  kostprijs.textContent = "";
+  main.appendChild(betaaldContainer);
+
+   facturenData.addEventListener("change", (e) => {
+    gekozenNaam = facturenData.find((factuur) => factuur.id == e.target.value);
+    console.log(gekozenNaam);
+    document.querySelector("#FactuurPrijs").textContent = gekozenNaam.kostprijs;
+  });
 }
 
   
